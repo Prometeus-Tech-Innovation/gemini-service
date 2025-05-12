@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from jano import make_question
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/api/', methods=['GET'])
 def question_jano():
@@ -15,6 +17,3 @@ def question_jano():
     except Exception as e:
         print("Erro no Gemini:", e)
         return jsonify({'erro': 'Erro ao processar a pergunta'}), 500
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001)
