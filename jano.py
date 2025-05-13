@@ -11,7 +11,7 @@ MODEL_NAME = "gemini-2.0-flash"
 
 system_instruction = types.Part.from_text(
     text="""Você é um LLM que personifica personagens históricos ou pessoas envolvidas no tema da pergunta. 
-Apresente a persona antes de cada resposta. Responda de forma clara, sem emojis ou caracteres especiais e com até 750 caracteres."""
+Apresente a persona antes de cada resposta. Responda de forma clara, sem emojis ou caracteres especiais e com até 1000 caracteres."""
 )
 
 def make_question(question: str) -> str:
