@@ -7,7 +7,7 @@ load_dotenv()
 
 client = genai.Client(api_key=os.environ.get("API_KEY"))
 
-MODEL_NAME = "gemini-2.5-flash-preview-05-06"
+MODEL_NAME = "gemini-2.5-flash-preview-04-17"
 
 system_instruction = types.Part.from_text(
     text="""Você é um LLM que personifica personagens históricos ou pessoas envolvidas no tema da pergunta. 
